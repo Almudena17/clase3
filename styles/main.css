@@ -1,0 +1,112 @@
+*{ /*para llamar a todas las etiquetas*/
+    box-sizing: border-box; /*mantiene el ancho de la caja a pesar de otros rellenos, lo hace minimizando el contenido de la caja*/
+}
+.menu{
+    display: none;
+}
+.logoHam{
+    width: 50px;
+}
+.nav{
+    background: rgb(198, 167, 228);
+    display: inline-block; /*en linea, anchos y altos*/
+}
+.title{
+    display: inline;
+    margin-left: 50px;
+}
+
+.box1, .box2, .box3{
+    width: 150px;
+    height: 150px;
+}
+.box1{
+    background-color: rosybrown;
+}
+.box2{
+    background-color: rgb(206, 219, 161);
+}
+.box3{
+    background-color: rgb(237, 192, 56);
+}
+.title::before{
+    content: "*"; /*antes del titulo mete ese contenido*/
+}
+.title::after{
+    content: "*"; /*despues del titulo mete contenido*/
+}
+
+@media all and (min-width: 768px){
+    .info{
+        background-color: burlywood;
+        display: flex;
+    }
+    .box1{
+        flex-grow: 2; /*repartir el espacio*/
+    }
+    .box2{
+        flex-grow: 4;
+    }
+    .box3{
+        flex-grow: 1;
+    }
+.blog{
+    display: flex;
+    justify-content: center;
+    flex-direction: row; /*eje principal*/
+    align-items: center; /*eje secundario*/
+    gap: 10px;
+    flex-wrap: wrap; /*para que los hijos mantengan su tamaño, y si no caben que pasen a otra fila o columna*/
+}
+.diferent{
+    order: -1;
+    background-color: blue;
+}
+.article-blog{
+    width: 45%;
+}
+.img-article{
+    display: flex;
+    justify-content: center;
+}
+.menu {
+    display: block;
+}
+.menu li{
+    display: inline;
+}
+.nav{
+    width: 50%;
+}
+.logoHam{
+    display: none;
+}
+}
+@media all and (min-width: 992px){
+    .article-blog{
+        width: 30%;
+    }
+    .nav{
+        width: 100%;
+        background-color: aquamarine;
+        padding: 50px; 
+    }
+}
+@media all and (min-width: 700px) and (max-width: 900px){
+
+}
+@media only screen and (orientation:portrait){
+    .title{
+        color: yellowgreen;
+    }
+}
+.blog h2{
+    color: bisque;
+}
+.blog p{
+    color: rgb(87, 79, 79);
+}
+.blog img{
+    width: 100%;
+    max-width: 200px;
+}
